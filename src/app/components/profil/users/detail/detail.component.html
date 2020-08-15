@@ -1,0 +1,11 @@
+<h1>Profil du geek</h1>
+
+<nb-card>
+    <nb-card-header>
+        {{ currentUser.pseudo }}
+    </nb-card-header>
+    <nb-card-body>
+        <p>Date de naissance : {{ currentUser.birthdate | date }}</p>
+        <p>Email : {{ currentUser.email }}</p>
+    </nb-card-body>
+</nb-card>
