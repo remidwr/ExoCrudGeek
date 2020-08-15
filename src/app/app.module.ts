@@ -34,7 +34,7 @@ import { DateconvertPipe } from './pipes/dateconvert.pipe';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    NbThemeModule.forRoot({ name: 'cosmic' }),
+    NbThemeModule.forRoot({ name: 'dark' }),
     NbLayoutModule,
     NbEvaIconsModule,
     NbSidebarModule.forRoot(),

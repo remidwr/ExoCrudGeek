@@ -1,2 +1,43 @@
-<input nbInput/>
-<button nbButton>Test</button>
+<h3>Nouveau utilisateur</h3>
+
+<form [formGroup]="userForm" (ngSubmit)="Submit()">
+    <p>
+        <label>Pseudo : </label>
+        <input nbInput formControlName="pseudo"/>
+    </p>
+    <p>
+        <label>Date de naissance : </label>
+        <input nbInput [nbDatepicker]="datepicker" formControlName="birthdate"/>
+        <nb-datepicker #datepicker></nb-datepicker>
+    </p>
+    <p>
+        <label>Email : </label>
+        <input nbInput formControlName="email"/>
+    </p>
+
+    <div formArrayName="manga">
+        <h4>Ajouter vos mangas préférés : </h4>
+        <button nbButton status="primary" type="button" (click)="AddManga()">Ajouter un manga</button>
+        <nb-list>
+            <nb-list-item *ngFor="let mangaControl of getManga().controls; let i = index;">
+                <p>
+                    Manga {{ i + 1 }} : <input nbInput type="text" [formControlName]="i"/>
+                </p>
+            </nb-list-item>
+        </nb-list>
+    </div>
+
+    <div formArrayName="game">
+        <h4>Ajouter vos jeux vidéo préférés : </h4>
+        <button nbButton status="primary" type="button" (click)="AddGame()">Ajouter un jeu vidéo</button>
+        <nb-list>
+            <nb-list-item *ngFor="let gameControl of getGame().controls; let i = index;">
+                <p>
+                    Jeu vidéo {{ i + 1 }} : <input nbInput type="text" [formControlName]="i"/>
+                </p>
+            </nb-list-item>
+        </nb-list>
+    </div>
+
+    <button nbButton status="primary" type="submit" [disabled]="userForm.invalid">Confirmer</button>
+</form>

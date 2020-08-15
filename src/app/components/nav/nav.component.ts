@@ -15,7 +15,7 @@ export class NavComponent implements OnInit {
   ngOnInit(): void {
     this.items = [
       { link : '/home', title : 'Home', icon : 'home' },
-      {link : '/register', title : 'Register' },
+      {link : '/register', title : 'Register', icon : 'save-outline' },
       { title : 'Profil', icon : 'person-outline', children : [
         { link : '/profil/users', title : 'Détails', icon : 'eye-outline' },
       ] },

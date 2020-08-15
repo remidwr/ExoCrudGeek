@@ -9,28 +9,25 @@ export class UserService {
 
   private listUser : User[] = [
     {
-      firstName : 'Rémi',
-      lastName : 'Dewinckeleer',
       pseudo : 'Remidwr',
       birthdate : new Date(1989, 12, 18),
       email : 'remidwr@gmail.com',
-      password : 'Test1234='
+      manga : ["L''Attaque des Titans", 'Death Note', 'Dragon Ball Z'],
+      game : ['The Witcher', 'Counter Strike']
     },
     {
-      firstName : 'Chris',
-      lastName : 'Nolan',
-      pseudo : 'Cnolan',
+      pseudo : 'ChrisNolan',
       birthdate : new Date(1970, 7, 30),
       email : 'chrisnolan@interstellar.com',
-      password : 'Test1234='
+      manga : ['Naruto', 'Fullmetal Alchemist', 'Bleach'],
+      game : ['Red Dead Redemption', 'Doom']
     },
     {
-      firstName : 'Bruce',
-      lastName : 'Wayne',
       pseudo : 'Batman',
       birthdate : new Date(1939, 5, 27),
       email : 'batman@dc.com',
-      password : 'Test1234='
+      manga : ['One Piece', 'Code Geass', 'One Punch Man'],
+      game : ['Grand Theft Auto', 'The Last of Us']
     }
   ]
 
