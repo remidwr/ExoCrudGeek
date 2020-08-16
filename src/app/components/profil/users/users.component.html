@@ -1,9 +1,10 @@
 <h3>Profil des Geeks</h3>
 
-<p>Cliquez sur le profil souhaité pour voir les détails</p>
-
 <nb-list>
     <nb-list-item *ngFor="let user of userList; let i = index;">
-        <a [routerLink]="['./detail', i]">{{ user.pseudo }}</a>
+        <div >{{ user.pseudo }}</div> &nbsp; &nbsp;
+        <button nbButton [routerLink]="['./detail', i]" status="primary">Détails</button> &nbsp;
+        <button nbButton status="warning">Update</button> &nbsp;
+        <button nbButton status="danger">Delete</button>
     </nb-list-item>
 </nb-list>

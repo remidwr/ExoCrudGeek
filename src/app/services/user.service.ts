@@ -46,5 +46,9 @@ export class UserService {
     return this.listUser[id];
   }
 
+  removeUser(id : number) {
+    this.listUser.splice(id);
+  }
+
   constructor() { }
 }

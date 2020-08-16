@@ -22,5 +22,4 @@ export class UsersComponent implements OnInit {
     )
     this._userService.emitUser();
   }
-
 }
