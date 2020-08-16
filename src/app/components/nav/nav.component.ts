@@ -16,8 +16,8 @@ export class NavComponent implements OnInit {
     this.items = [
       { link : '/home', title : 'Home', icon : 'home' },
       {link : '/register', title : 'Register', icon : 'save-outline' },
-      { title : 'Profil', icon : 'person-outline', children : [
-        { link : '/profil/users', title : 'Détails', icon : 'eye-outline' },
+      { title : 'Les profils de Geeks', icon : 'person-outline', children : [
+        { link : '/profil/users', title : 'Listes des Geeks', icon : 'list-outline' },
       ] },
       { link : '/about', title : 'About', icon : 'alert-triangle' },
     ]

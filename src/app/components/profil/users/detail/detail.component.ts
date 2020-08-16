@@ -21,6 +21,8 @@ export class DetailComponent implements OnInit {
     this.currentUser = this._userService.getUser(this._routing.snapshot.params['id']);
   }
 
-  
+  onTest(){
+    alert('test');
+  }
 
 }

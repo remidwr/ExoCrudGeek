@@ -1,4 +1,4 @@
-<h3>Nouveau utilisateur</h3>
+<h3>Nouvel utilisateur Geek</h3>
 
 <form [formGroup]="userForm" (ngSubmit)="Submit()">
     <p>
@@ -21,7 +21,8 @@
         <nb-list>
             <nb-list-item *ngFor="let mangaControl of getManga().controls; let i = index;">
                 <p>
-                    Manga {{ i + 1 }} : <input nbInput type="text" [formControlName]="i"/>
+                    Manga {{ i + 1 }} : <input nbInput type="text" [formControlName]="i"/> &nbsp;
+                    <button nbButton status="danger" type="button" (click)="RemoveManga(i)">X</button>
                 </p>
             </nb-list-item>
         </nb-list>
@@ -33,11 +34,14 @@
         <nb-list>
             <nb-list-item *ngFor="let gameControl of getGame().controls; let i = index;">
                 <p>
-                    Jeu vidéo {{ i + 1 }} : <input nbInput type="text" [formControlName]="i"/>
+                    Jeu vidéo {{ i + 1 }} : <input nbInput type="text" [formControlName]="i"/> &nbsp;
+                    <button nbButton status="danger" type="button" (click)="RemoveGame(i)">X</button>
                 </p>
             </nb-list-item>
         </nb-list>
     </div>
 
-    <button nbButton status="primary" type="submit" [disabled]="userForm.invalid">Confirmer</button>
+    <p>
+        <button nbButton status="primary" type="submit" [disabled]="userForm.invalid">Confirmer</button>
+    </p>
 </form>

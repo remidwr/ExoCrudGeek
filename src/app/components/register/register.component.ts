@@ -56,6 +56,10 @@ export class RegisterComponent implements OnInit {
     this.getManga().push(newManga);
   }
 
+  RemoveManga(i : number) {
+    this.getManga().removeAt(i);
+  }
+
   getGame() {
     return this.userForm.get('game') as FormArray;
   }
@@ -63,6 +67,10 @@ export class RegisterComponent implements OnInit {
   AddGame() {
     const newGame = this._builder.control('', [Validators.required, Validators.minLength(2), Validators.maxLength(20)]);
     this.getGame().push(newGame);
+  }
+
+  RemoveGame(i : number) {
+    this.getGame().removeAt(i);
   }
 
 }
