@@ -2,11 +2,27 @@
 
 <nb-card>
     <nb-card-header>
-        {{ currentUser.pseudo }}
+        <h4>{{ currentUser.pseudo }}</h4>
     </nb-card-header>
     <nb-card-body>
         <p>Date de naissance : {{ currentUser.birthdate | date }}</p>
         <p>Email : {{ currentUser.email }}</p>
+    </nb-card-body>
+    <nb-card-body *ngIf="currentUser.manga && currentUser.manga.length > 0">
+        <h6>Mangas préférés</h6>
+        <nb-list>
+            <nb-list-item *ngFor="let manga of currentUser.manga">
+                {{ manga }}
+            </nb-list-item>
+        </nb-list>
+    </nb-card-body>
+    <nb-card-body *ngIf="currentUser.game && currentUser.game.length > 0">
+        <h6>Jeux vidéo préférés</h6>
+        <nb-list>
+            <nb-list-item *ngFor="let game of currentUser.game">
+                {{ game }}
+            </nb-list-item>
+        </nb-list>
     </nb-card-body>
 </nb-card>
 

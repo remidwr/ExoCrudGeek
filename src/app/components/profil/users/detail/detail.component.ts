@@ -12,6 +12,8 @@ export class DetailComponent implements OnInit {
 
   currentUser : User = new User();
 
+  isToggled : boolean;
+
   constructor(
     private _userService : UserService,
     private _routing : ActivatedRoute
@@ -21,8 +23,7 @@ export class DetailComponent implements OnInit {
     this.currentUser = this._userService.getUser(this._routing.snapshot.params['id']);
   }
 
-  onTest(){
-    alert('test');
+  toggle() {
+    this.isToggled = !this.isToggled;
   }
-
 }
