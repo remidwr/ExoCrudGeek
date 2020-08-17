@@ -1,9 +1,6 @@
-<h1>Profil du geek</h1>
+<h1>Profil de {{ currentUser.pseudo }}</h1>
 
 <nb-card>
-    <nb-card-header>
-        <h4>{{ currentUser.pseudo }}</h4>
-    </nb-card-header>
     <nb-card-body>
         <p>Date de naissance : {{ currentUser.birthdate | date }}</p>
         <p>Email : {{ currentUser.email }}</p>
@@ -28,5 +25,4 @@
 
 <p>
     <button nbButton status="danger" type="button" [routerLink]="['../../']">Back</button>
-    
 </p>

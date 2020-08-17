@@ -6,6 +6,7 @@ import { ProfilComponent } from './components/profil/profil.component';
 import { DetailComponent } from './components/profil/users/detail/detail.component';
 import { UsersComponent } from './components/profil/users/users.component';
 import { RegisterComponent } from './components/register/register.component';
+import { UpdateComponent } from './components/profil/users/update/update.component';
 
 const routes: Routes = [
   { path: 'home', component : HomeComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'profil', component : ProfilComponent, children : [
     { path: 'users', component : UsersComponent },
     { path: 'users/detail/:id', component : DetailComponent },
+    { path: 'users/update/:id', component : UpdateComponent }
   ] },
   { path: 'about', component : AboutComponent },
 ];

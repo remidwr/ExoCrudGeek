@@ -14,7 +14,9 @@ export class UsersComponent implements OnInit {
 
   userSubscription : Subscription;
 
-  constructor(private _userService : UserService) { }
+  constructor(
+    private _userService : UserService
+  ) { }
 
   ngOnInit(): void {
     this.userSubscription = this._userService.userSubject.subscribe(
@@ -22,4 +24,9 @@ export class UsersComponent implements OnInit {
     )
     this._userService.emitUser();
   }
+
+  removeUser (id : number) {
+    this._userService.removeUser(id);
+  }
+
 }

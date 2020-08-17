@@ -46,8 +46,13 @@ export class UserService {
     return this.listUser[id];
   }
 
+  updateUser(user : User, id : number) {
+    this.listUser[id] = user;
+  }
+
   removeUser(id : number) {
-    this.listUser.splice(id);
+    this.listUser.splice(id, 1);
+    this.emitUser();
   }
 
   constructor() { }

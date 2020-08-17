@@ -1,10 +1,10 @@
-<h3>Profil des Geeks</h3>
+<h3>Profils des Geeks</h3>
 
 <nb-list>
     <nb-list-item *ngFor="let user of userList; let i = index;">
         <div >{{ user.pseudo }}</div> &nbsp; &nbsp;
-        <button nbButton [routerLink]="['./detail', i]" status="primary">Détails</button> &nbsp;
-        <button nbButton status="warning">Update</button> &nbsp;
-        <button nbButton status="danger">Delete</button>
+        <button nbButton status="primary" [routerLink]="['./detail', i]">Détails</button> &nbsp;
+        <button nbButton status="warning" [routerLink]="['./update', i]">Update</button> &nbsp;
+        <button nbButton status="danger" (click)="removeUser(i)">Delete</button>
     </nb-list-item>
 </nb-list>

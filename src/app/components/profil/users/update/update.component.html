@@ -1,4 +1,4 @@
-<h3>Nouvel utilisateur Geek</h3>
+<h3>Modifier le profil de {{ currentUser.pseudo }}</h3>
 
 <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
     <p>
@@ -38,6 +38,7 @@
     </div>
 
     <p>
-        <button nbButton status="primary" type="submit" [disabled]="userForm.invalid">Confirmer</button>
+        <button nbButton status="primary" type="submit" [disabled]="userForm.invalid">Confirmer</button> &nbsp;
+        <button nbButton status="danger" type="button" [routerLink]="['../../']">Back</button>
     </p>
 </form>

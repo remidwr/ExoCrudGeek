@@ -17,6 +17,7 @@ import { DetailComponent } from './components/profil/users/detail/detail.compone
 import { UsersComponent } from './components/profil/users/users.component';
 import { RegisterComponent } from './components/register/register.component';
 import { DateconvertPipe } from './pipes/dateconvert.pipe';
+import { UpdateComponent } from './components/profil/users/update/update.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { DateconvertPipe } from './pipes/dateconvert.pipe';
     UsersComponent,
     RegisterComponent,
     DateconvertPipe,
+    UpdateComponent,
   ],
   imports: [
     BrowserModule,
